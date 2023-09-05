@@ -2,4 +2,7 @@
 for first in range(9):
     for second in range(10):
         if first < second:
-            print("{}{}".format(first, second), end=", ")
+            if first == 8 and second == 9:
+                print("{}{}".format(first, second), end="")
+            else:
+                print("{}{}".format(first, second), end=", ")
