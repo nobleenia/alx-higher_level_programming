@@ -12,4 +12,7 @@
 10. 10-best_score.py: A function that returns a key with the biggest integer value
 11. 11-multiply_list_map.py: A function that returns a list with all values multiplied by a number without using any loops
 12. 12-roman_to_int.py: Technical interview preparation: Roman to Integer
-13. 
+13. 100-weight_average.py: A function that returns the weighted average of all integers tuple
+14. 101-square_matrix_map.py: A function that computes the square value of all integers of a matrix using map
+15. 102-complex_delete.py: A function that deletes keys with a specific value in a dictionary
+16. 103-python.c: Two C functions that print some basic info about Python lists and Python bytes objects
