@@ -13,8 +13,8 @@ class Square:
     - __size (None): The size of the square defaults to None.
 
     Methods:
-    - __init__(self, size=None): Initializes a new square with the specified size.
-        - size (None): The size of the square is not set initially.
+    - __init__(self, size=None): Initializes a new square with the size.
+    - size (None): The size of the square is not set initially.
     """
     def __init__(self, size=None):
         """
