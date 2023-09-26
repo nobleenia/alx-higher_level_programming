@@ -13,12 +13,12 @@ class Square:
     - size (int): The size (side length) of the square.
 
     Methods:
-    - __init__(self, size=0): Initializes a new square with the specified size.
+    - __init__(self, size=0): Initializes a new square with the size.
         - size (int): The size of the square (default is 0).
         - Raises:
             - TypeError: If the size is not an integer.
             - ValueError: If the size is less than 0.
-    - my_print(self): Print a representation of the square using '#' characters
+    - my_print(self): Print a representation of the square using '#'
     - area(self): Calculate and return the area of the square.
     """
     
@@ -28,10 +28,9 @@ class Square:
 
         Args:
         - size (int): The size of the square (default is 0).
-        - position (tuple): The cordinates of the square position.
         """
         self.__size = size
-        self.__position = position
+        self.position = position
 
     @property
     def size(self):
@@ -64,30 +63,29 @@ class Square:
     @property
     def position(self):
         """
-        Get the position (x, y) of the square.
-
+        Get the position of the square.
+        
         Returns:
-        - tuple: A tuple containing two positive integers
-        representing the position (x, y) of the square.
+        - tuple: The position of the square as a tuple of 2 positive integers.
         """
         return self.__position
-    
+
     @position.setter
     def position(self, value):
         """
-        Set the position (x, y) of the square to a new value.
-
+        Set the position of the square to a new value.
+        
         Args:
-        - value (tuple): A tuple containing two positive integers representing
-        the new position (x, y) to set.
+        - value (tuple): The new position to set.
 
         Raises:
-        - TypeError: If value is not a tuple of two positive integers.
+        - TypeError: If the value is not a tuple of 2 positive integers.
+        - ValueError: If the values in the tuple are not positive integers.
         """
-        if type(value) is not tuple or len(value) != 2 or \
-                type(value[0]) is not int or type(value[1]) is not int or \
-                value[0] < 0 or value[1] < 0:
+        if type(value) is not tuple or len(value) != 2:
             raise TypeError("position must be a tuple of 2 positive integers")
+        if not all(isinstance(x, int) and x >= 0 for x in value):
+            raise ValueError("position must be a tuple of 2 positive integers")
         self.__position = value
 
     def area(self):
@@ -103,15 +101,17 @@ class Square:
         """
         Print a representation of the square using '#' characters.
 
-        This method prints a square representation of the object using '#'.
+        This method prints a square representation of the object using '#'
         Each row consists of '#' characters equal to the size of the square.
         If the square has a size of 0, it will print an empty line.
         """
-        if not self.__size:
+        if self.__size == 0:
             print()
             return
 
-        print("\n" * self.position[1], end="")
-        print("\n".join([" " * self.position[0] +
-                        "#" * self.size
-                         for i in range(self.size)]))
+        for i in range(self.__position[1]):
+            print()
+
+        for i in range(self.__size):
+            print(" " * self.__position[0], end="")
+            print("#" * self.__size)
