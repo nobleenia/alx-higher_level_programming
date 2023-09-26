@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-import math
 """
 MagicClass
 """
+from math import pi
 
 
 class MagicClass:
@@ -36,7 +36,7 @@ class MagicClass:
         - TypeError: If radius is not a number (int or float).
         """
         if type(radius) is not int and type(radius) is not float:
-            raise TypeError('radius must be a number')
+            raise TypeError("radius must be a number")
         self.__radius = float(radius)
 
     def area(self):
@@ -46,7 +46,7 @@ class MagicClass:
         Returns:
         - float: The area of the circle.
         """
-        return self.__radius ** 2 * math.pi
+        return self.__radius ** 2 * pi
 
     def circumference(self):
         """
@@ -55,4 +55,4 @@ class MagicClass:
         Returns:
         - float: The circumference of the circle.
         """
-        return 2 * math.pi * self.__radius
+        return 2 * pi * self.__radius

@@ -67,7 +67,8 @@ class Square:
         Get the position (x, y) of the square.
 
         Returns:
-        - tuple: A tuple containing two positive integers representing the position (x, y) of the square.
+        - tuple: A tuple containing two positive integers
+        representing the position (x, y) of the square.
         """
         return self.__position
     
@@ -77,13 +78,14 @@ class Square:
         Set the position (x, y) of the square to a new value.
 
         Args:
-        - value (tuple): A tuple containing two positive integers representing the new position (x, y) to set.
+        - value (tuple): A tuple containing two positive integers representing
+        the new position (x, y) to set.
 
         Raises:
         - TypeError: If value is not a tuple of two positive integers.
         """
         if type(value) is not tuple or len(value) != 2\
-           or (type(value[0]) or type(value[1])) is not int\
+           or type(value[0]) is not int or type(value[1]) is not int\
                or value[0] < 0 or value[1] < 0:
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
@@ -101,7 +103,7 @@ class Square:
         """
         Print a representation of the square using '#' characters.
 
-        This method prints a square representation of the object using '#' characters.
+        This method prints a square representation of the object using '#'.
         Each row consists of '#' characters equal to the size of the square.
         If the square has a size of 0, it will print an empty line.
         """

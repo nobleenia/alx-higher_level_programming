@@ -13,12 +13,12 @@ class Square:
     - size (int): The size (side length) of the square.
 
     Methods:
-    - __init__(self, size=0): Initializes a new square with the specified size.
+    - __init__(self, size=0): Initializes a new square with the size.
         - size (int): The size of the square (default is 0).
         - Raises:
             - TypeError: If the size is not an integer.
             - ValueError: If the size is less than 0.
-    - my_print(self): Print a representation of the square using '#' characters
+    - my_print(self): Print a representation of the square using '#'
     - area(self): Calculate and return the area of the square.
     """
     
@@ -72,7 +72,7 @@ class Square:
         """
         Print a representation of the square using '#' characters.
 
-        This method prints a square representation of the object using '#' characters.
+        This method prints a square representation of the object using '#'
         Each row consists of '#' characters equal to the size of the square.
         If the square has a size of 0, it will print an empty line.
         """
