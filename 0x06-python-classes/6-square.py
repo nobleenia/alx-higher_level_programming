@@ -107,7 +107,7 @@ class Square:
         Each row consists of '#' characters equal to the size of the square.
         If the square has a size of 0, it will print an empty line.
         """
-        if self.__size == 0:
+        if not self.__size:
             print()
             return
 
