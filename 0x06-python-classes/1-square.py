@@ -19,7 +19,7 @@ class Square:
     def __init__(self, size=None):
         """
         Initiatilizes Square with size.
-        
+
         Args:
         - size (None): The size of the square is not set initially.
         """

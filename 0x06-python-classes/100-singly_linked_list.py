@@ -4,20 +4,24 @@ Node Class
 Defines a node of a singly linked list
 """
 
+
 class Node:
     """
     This class represents a node in a singly linked list.
 
     Attributes:
     - data (int): The data stored in the node.
-    - next_node (Node): Reference to the next node in the list, or None if it's the last node.
+    - next_node (Node): Reference to the next node in the list,
+    or None if it's the last node.
 
     Methods:
-    - __init__(self, data, next_node=None): Initializes a new node with the specified data.
-        - data (int): The data to be stored in the node.
-        - next_node (Node): Reference to the next node in the list (default is None).
-        - Raises:
-            - TypeError: If data is not an integer.
+    - __init__(self, data, next_node=None): Initializes a new node
+    with the specified data.
+    - data (int): The data to be stored in the node.
+    - next_node (Node): Reference to the next node in the
+    list (default is None).
+    - Raises:
+    - TypeError: If data is not an integer.
     """
     def __init__(self, data, next_node=None):
         """
@@ -25,7 +29,8 @@ class Node:
 
         Args:
         - data (int): The data to be stored in the node.
-        - next_node (Node): Reference to the next node in the list (default is None).
+        - next_node (Node): Reference to the next node in the
+        list (default is None).
 
         Raises:
         - TypeError: If data is not an integer.
@@ -64,7 +69,8 @@ class Node:
         Get the reference to the next node in the list.
 
         Returns:
-        - Node or None: Reference to the next node in the list, or None if it's the last node.
+        - Node or None: Reference to the next node in the list,
+        or None if it's the last node.
         """
         return self.__next_node
 
@@ -74,7 +80,8 @@ class Node:
         Set the reference to the next node in the list.
 
         Args:
-        - value (Node or None): Reference to the next node in the list, or None if it's the last node.
+        - value (Node or None): Reference to the next node in the list,
+        or None if it's the last node.
 
         Raises:
         - TypeError: If value is not a Node object or None.
@@ -98,7 +105,8 @@ class SinglyLinkedList:
         Convert the linked list into a string representation.
 
         Returns:
-        - str: A string representation of the linked list where each element is separated by a newline character.
+        - str: A string representation of the linked list where each
+        element is separated by a newline character.
         """
         string = ""
         temp_node = self.__head
@@ -112,14 +120,16 @@ class SinglyLinkedList:
     
     def sorted_insert(self, value):
         """
-        Insert a new node with the specified value into the sorted position of the linked list.
+        Insert a new node with the specified value into the sorted
+        position of the linked list.
 
         Args:
         - value (int): The value to be inserted into the linked list.
 
         Description:
-        This method inserts a new node with the specified value into the linked list while maintaining
-        ascending order based on the values of the nodes. If the list is initially empty, the new node
+        This method inserts a new node with the specified value into the
+        linked list while maintaining ascending order based on the values of
+        the nodes. If the list is initially empty, the new node
         becomes the head of the list.
         """
         new_node = Node(value)
@@ -131,7 +141,8 @@ class SinglyLinkedList:
             self.__head = new_node
         else:
             temp_node = self.__head
-            while temp_node.next_node is not None and temp_node.next_node.data < value:
+            while temp_node.next_node is not None and \
+                  temp_node.next_node.data < value:
                 temp_node = temp_node.next_node
             new_node.next_node = temp_node.next_node
             temp_node.next_node = new_node

@@ -8,7 +8,7 @@ This module contains a class that defines a square
 class Square:
     """
     This is a class that defines a square.
-    
+
     Attributes:
     - size (int): The size (side length) of the square.
 
@@ -21,7 +21,7 @@ class Square:
     - my_print(self): Print a representation of the square using '#' characters
     - area(self): Calculate and return the area of the square.
     """
-    
+
     def __init__(self, size=0, position=(0, 0)):
         """
         Initiatilizes Square with size.
@@ -37,7 +37,7 @@ class Square:
     def size(self):
         """
         Get the size (side length) of the square.
-        
+
         Returns:
         - int: The size of the square.
         """
@@ -47,7 +47,7 @@ class Square:
     def size(self, value):
         """
         Set the size of the square to a new value.
-        
+
         Args:
         - value (int): The new size to set.
 
@@ -67,17 +67,19 @@ class Square:
         Get the position (x, y) of the square.
 
         Returns:
-        - tuple: A tuple containing two positive integers representing the position (x, y) of the square.
+        - tuple: A tuple containing two positive integers representing
+        the position (x, y) of the square.
         """
         return self.__position
-    
+
     @position.setter
     def position(self, value):
         """
         Set the position (x, y) of the square to a new value.
 
         Args:
-        - value (tuple): A tuple containing two positive integers representing the new position (x, y) to set.
+        - value (tuple): A tuple containing two positive integers representing
+        the new position (x, y) to set.
 
         Raises:
         - TypeError: If value is not a tuple of two positive integers.
@@ -124,13 +126,14 @@ class Square:
         Return a string representation of the square, considering its position.
 
         Returns:
-        - str: A string representation of the square where '#' characters represent the square's sides,
-               and empty spaces are used to adjust the position.
+        - str: A string representation of the square where '#' characters
+        represent the square's sides, and empty spaces are used to adjust the position.
 
         Description:
-        This method generates a string representation of the square, taking into account both its size and position.
-        It creates a square composed of '#' characters and adjusts its position by adding leading spaces.
-        The resulting string represents the square, and each row is separated by a newline character.
+        This method generates a string representation of the square, taking into
+        account both its size and position. It creates a square composed of '#'
+        characters and adjusts its position by adding leading spaces. The resulting string
+        represents the square, and each row is separated by a newline character.
         """
         if self.__size != 0:
             for i in range(0, self.__position[1]):

@@ -8,7 +8,7 @@ This module contains a class that defines a square
 class Square:
     """
     This is a class that defines a square.
-    
+
     Attributes:
     - size (int): The size (side length) of the square.
 

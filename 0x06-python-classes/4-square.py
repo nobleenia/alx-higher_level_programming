@@ -8,7 +8,7 @@ This module contains a class that defines a square
 class Square:
     """
     This is a class that defines a square.
-    
+
     Attributes:
     - size (int): The size (side length) of the square.
 
@@ -20,7 +20,7 @@ class Square:
             - ValueError: If the size is less than 0.
     - area(self): Calculate and return the area of the square.
     """
-    
+
     def __init__(self, size=0):
         """
         Initiatilizes Square with size.
@@ -34,7 +34,7 @@ class Square:
     def size(self):
         """
         Get the size (side length) of the square.
-        
+
         Returns:
         - int: The size of the square.
         """
@@ -44,7 +44,7 @@ class Square:
     def size(self, value):
         """
         Set the size of the square to a new value.
-        
+
         Args:
         - value (int): The new size to set.
 
