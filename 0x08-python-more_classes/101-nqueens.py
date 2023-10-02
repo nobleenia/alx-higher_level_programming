@@ -1,8 +1,10 @@
 #!/usr/bin/python3
 """
 N-Queens problem solver using backtracking.
-This program finds and prints all possible solutions to the N-Queens problem.
+This program finds and prints all possible solutions to the
+N-Queens problem.
 """
+
 
 import sys
 
@@ -43,7 +45,8 @@ if __name__ == "__main__":
 
     def reject_solution(row_x, col_y):
         """
-        Determine whether to reject a solution based on the placement of a queen.
+        Determine whether to reject a solution based on the placemen
+        of a queen.
 
         Args:
             row_x (int): The row where we want to place the queen.
@@ -74,7 +77,8 @@ if __name__ == "__main__":
 
     def nqueens(row_x):
         """
-        Recursively find and print all possible solutions to the N-Queens problem.
+        Recursively find and print all possible solutions to the
+        N-Queens problem.
 
         Args:
             row_x (int): The current row being considered.
