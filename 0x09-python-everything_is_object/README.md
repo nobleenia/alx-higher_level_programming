@@ -72,9 +72,9 @@
 
 16. 16-answer.txt: What does this script print?  
 `def increment(n):`  
-`    n += 1`   
+`    n += 1`  
 
-`a = 1`   
+`a = 1`  
 `increment(a)`  
 `print(a)`
 
@@ -82,7 +82,7 @@
 `def increment(n):`  
 `    n.append(4)`  
 
-`l = [1, 2, 3]`  
+`l = [1, 2, 3]` 
 `increment(l)`  
 `print(l)`
 
@@ -138,10 +138,10 @@ Is a a tuple? Answer with Yes or No
 Will the last line of this script print 139926795932424? Answer with Yes or No
 
 28. 28-answer.txt:  
-`>>> a` 
-`[1, 2, 3]` 
-`>>> id (a)` 
+`>>> a`  
+`[1, 2, 3]`  
+`>>> id (a)`  
 `139926795932424`  
-`>>> a += [4]` 
-`>>> id(a)`  
+`>>> a += [4]`  
+`>>> id(a)`   
 Will the last line of this script print 139926795932424? Answer with Yes or No
