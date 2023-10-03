@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """
 LockedClass
-
 Prevents the user from dynamically creating new instance attributes,
 except the new instance attribute is called first_name.
 """
@@ -12,7 +11,7 @@ class LockedClass:
     Restricts the creation of new instance attributes,
     allowing only the 'first_name' attribute to be assigned dynamically.
     """
-    _slots__ = ["first_name"]
+    __slots__ = ["first_name"]
 
     def __init__(self, first_name=""):
         """
