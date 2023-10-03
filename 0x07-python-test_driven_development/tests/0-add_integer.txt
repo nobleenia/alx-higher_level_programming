@@ -1,0 +1,58 @@
+# Run test with python3 -m doctest -v ./tests/0-add_integer.txt
+
+First import method to test
+>>> add_integer = __import__('0-add_integer').add_integer
+
+# Test cases for the add_integer function
+
+# Adding two integers
+>>> add_integer(5, 3)
+8
+
+# Adding two floats
+>>> add_integer(10.5, 7.2)
+17
+
+# Using the default value for b (98)
+>>> add_integer(5)
+103
+
+# Adding a float and an integer
+>>> add_integer(5.5, 3)
+8
+
+# Adding an integer and a string (should raise a TypeError)
+>>> add_integer("5", 3)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer or float
+
+# Adding a string and an integer (should raise a TypeError)
+>>> add_integer(5, "3")
+Traceback (most recent call last):
+    ...
+TypeError: b must be an integer or float
+
+# Adding two strings (should raise a TypeError)
+>>> add_integer("5", "3")
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer or float
+
+# Adding two booleans (should raise a TypeError)
+>>> add_integer(True, False)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer or float
+
+# Adding a list and an integer (should raise a TypeError)
+>>> add_integer([1, 2, 3], 5)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer or float
+
+# Adding an integer and a dictionary (should raise a TypeError)
+>>> add_integer(5, {"a": 1, "b": 2})
+Traceback (most recent call last):
+    ...
+TypeError: b must be an integer or float

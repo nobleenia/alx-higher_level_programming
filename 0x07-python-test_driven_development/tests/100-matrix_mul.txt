@@ -1,0 +1,44 @@
+# Run test with python3 -m doctest -v ./tests/100-matrix_mul.txt
+
+First import method to test
+>>> matrix_mul = __import__('100-matrix_mul').matrix_mul
+
+# Test cases for the matrix_mul function
+
+# Multiplying two 2x2 matrices
+>>> matrix_a = [[1, 2], [3, 4]]
+>>> matrix_b = [[5, 6], [7, 8]]
+>>> matrix_mul(matrix_a, matrix_b)
+[[19, 22], [43, 50]]
+
+# Multiplying a 2x2 matrix by a 2x3 matrix (incompatible dimensions)
+>>> matrix_a = [[1, 2], [3, 4]]
+>>> matrix_b = [[5, 6, 7], [8, 9, 10]]
+>>> matrix_mul(matrix_a, matrix_b)
+Traceback (most recent call last):
+    ...
+ValueError: matrix_a and matrix_b can't be multiplied
+
+# Multiplying a 3x2 matrix by a 2x2 matrix
+>>> matrix_a = [[1, 2], [3, 4], [5, 6]]
+>>> matrix_b = [[7, 8], [9, 10]]
+>>> matrix_mul(matrix_a, matrix_b)
+[[25, 28], [57, 64], [89, 100]]
+
+# Multiplying a 1x1 matrix by a 1x1 matrix
+>>> matrix_a = [[2]]
+>>> matrix_b = [[3]]
+>>> matrix_mul(matrix_a, matrix_b)
+[[6]]
+
+# Multiplying a 3x3 matrix by a 3x3 matrix
+>>> matrix_a = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+>>> matrix_b = [[9, 8, 7], [6, 5, 4], [3, 2, 1]]
+>>> matrix_mul(matrix_a, matrix_b)
+[[30, 24, 18], [84, 69, 54], [138, 114, 90]]
+
+# Multiplying a 2x2 matrix by a 2x2 matrix containing floats
+>>> matrix_a = [[1.5, 2.5], [3.5, 4.5]]
+>>> matrix_b = [[0.5, 0.5], [0.5, 0.5]]
+>>> matrix_mul(matrix_a, matrix_b)
+[[1.25, 1.25], [3.25, 3.25]]

@@ -1,0 +1,38 @@
+# Run test with python3 -m doctest -v ./tests/3-say_my_name.txt
+
+First import method to test
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+# Test cases for the say_my_name function
+
+# Saying the full name "John Doe"
+>>> say_my_name("John", "Doe")
+My name is John Doe
+
+# Saying the first name "Alice" (no last name provided)
+>>> say_my_name("Alice")
+My name is Alice
+
+# Providing an integer as the first name (should raise TypeError)
+>>> say_my_name(42, "Smith")
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string
+
+# Providing an integer as the last name (should raise TypeError)
+>>> say_my_name("Bob", 123)
+Traceback (most recent call last):
+    ...
+TypeError: last_name must be a string
+
+# Saying the full name "Mary Johnson"
+>>> say_my_name("Mary", "Johnson")
+My name is Mary Johnson
+
+# Saying the full name "John "
+>>> say_my_name("John", "")
+My name is John
+
+# Saying the full name " "
+>>> say_my_name("", "Doe")
+My name is  Doe

@@ -1,0 +1,39 @@
+# Run test with python3 -m doctest -v ./tests/4-print_square.txt
+
+First import method to test
+>>> print_square= __import__('4-print_square').print_square
+
+# Test cases for the print_square function
+
+# Printing a square of size 3
+>>> print_square(3)
+###
+###
+###
+
+# Printing a square of size 0 (should have no output)
+>>> print_square(0)
+(no output)
+
+# Providing a negative size (should raise ValueError)
+>>> print_square(-2)
+Traceback (most recent call last):
+    ...
+ValueError: size must be >= 0
+
+# Providing a string as size (should raise TypeError)
+>>> print_square("5")
+Traceback (most recent call last):
+    ...
+TypeError: size must be an integer
+
+# Printing a square of size 1
+>>> print_square(1)
+#
+
+# Printing a square of size 4
+>>> print_square(4)
+####
+####
+####
+####

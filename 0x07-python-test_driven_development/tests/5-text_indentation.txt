@@ -1,0 +1,50 @@
+# Run test with python3 -m doctest -v ./tests/5-text_indentation.txt
+
+First import method to test
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+# Test cases for the text_indentation function
+
+# Formatting a text with periods, question marks, and colons
+>>> text = "Hello. This is a sample text: it contains some sentences. What do you think?"
+>>> text_indentation(text)
+Hello.
+
+This is a sample text: it contains some sentences.
+
+What do you think?
+
+# Providing a non-string input (should raise TypeError)
+>>> text_indentation(123)
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
+
+# Providing an empty string (should produce an empty string)
+>>> text_indentation("")
+(no output)
+
+# Formatting a text with no punctuation marks
+>>> text = "This is a test with no punctuation marks"
+>>> text_indentation(text)
+This is a test with no punctuation marks
+
+# Formatting a text with multiple spaces and newlines
+>>> text = "Hello. This is \n\n a test\nwith multiple spaces.   What do you think?"
+>>> text_indentation(text)
+Hello.
+
+This is a test
+
+with multiple spaces.
+
+What do you think?
+
+# Formatting a text with special characters
+>>> text = "Hello? This is a test with special characters: @#$%! What do you think?"
+>>> text_indentation(text)
+Hello?
+
+This is a test with special characters: @#$%!
+
+What do you think?
