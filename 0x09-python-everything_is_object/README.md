@@ -1,4 +1,4 @@
-0x09. Python - Everything is object
+# 0x09. Python - Everything is object
 
 0. 0-answer.txt: What function would you use to get the type of an object?
 1. 1-answer.txt: How do you get the variable identifier (which is the memory address in the CPython implementation)?
@@ -147,3 +147,10 @@ Will the last line of this script print 139926795932424? Answer with Yes or No
 `>>> a += [4]`  
 `>>> id(a)`   
 Will the last line of this script print 139926795932424? Answer with Yes or No
+
+29. 100-magic_string.py: A function magic_string() that returns a string “BestSchool” n times the number of the iteration
+30. 101-locked_class.py: A class LockedClass with no class or object attribute, that prevents the user from dynamically creating new instance attributes,  
+except if the new instance attribute is called first_name
+31. 103-line1.txt, 103-line2.txt: int 1/3
+32. 104-line1.txt, 104-line2.txt, 104-line3.txt, 104-line4.txt, 104-line5.txt: 2/3
+33. 105-line1.txt: int 3/3
