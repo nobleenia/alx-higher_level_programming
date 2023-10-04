@@ -31,28 +31,28 @@ TypeError: a must be an integer or float
 >>> add_integer(5, "3")
 Traceback (most recent call last):
     ...
-TypeError: b must be an integer or float
+TypeError: b must be an integer
 
 # Adding two strings (should raise a TypeError)
 >>> add_integer("5", "3")
 Traceback (most recent call last):
     ...
-TypeError: a must be an integer or float
+TypeError: a must be an integer
 
 # Adding two booleans (should raise a TypeError)
 >>> add_integer(True, False)
 Traceback (most recent call last):
     ...
-TypeError: a must be an integer or float
+TypeError: a must be an integer
 
 # Adding a list and an integer (should raise a TypeError)
 >>> add_integer([1, 2, 3], 5)
 Traceback (most recent call last):
     ...
-TypeError: a must be an integer or float
+TypeError: a must be an integer
 
 # Adding an integer and a dictionary (should raise a TypeError)
 >>> add_integer(5, {"a": 1, "b": 2})
 Traceback (most recent call last):
     ...
-TypeError: b must be an integer or float
+TypeError: b must be an integer

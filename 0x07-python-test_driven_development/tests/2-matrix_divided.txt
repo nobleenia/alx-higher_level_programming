@@ -22,7 +22,7 @@ Traceback (most recent call last):
     ...
 TypeError: matrix must be a matrix (list of lists) of integers/floats
 
-# Dividing a matrix with rows of different sizes (should raise TypeError)
+# Divide matrix with rows of different sizes (should raise TypeError)
 >>> matrix_divided([[1, 2, 3], [4, 5], [6, 7, 8]], 2)
 Traceback (most recent call last):
     ...
@@ -37,3 +37,50 @@ TypeError: matrix must be a matrix (list of lists) of integers/floats
 # Dividing a matrix by 2.5
 >>> matrix_divided([[1.5, 2.5], [3.5, 4.5]], 2.5)
 [[0.6, 1.0], [1.4, 1.8]]
+
+>>> matrix = {1, 2, 3, 4}
+>>> print(matrix_divided(matrix, 2))
+Traceback (most recent call last):
+    ...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> matrix = [[1, 2], 3, {4, 5}]
+>>> print(matrix_divided(matrix, 2))
+Traceback (most recent call last):
+    ...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> matrix = [[1, 2, 3], {"key" : 4}]
+>>> print(matrix_divided(matrix, 2))
+Traceback (most recent call last):
+    ...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> matrix = [[1, 2, 3], {"key" : 4}]
+>>> print(matrix_divided(matrix, 2))
+Traceback (most recent call last):
+    ...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> print(matrix_divided(None, 2))
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> matrix = []
+>>> print(matrix_divided(matrix, 2))
+Traceback (most recent call last):
+    ...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> matrix = [[], [], []]
+>>> print(matrix_divided(matrix, 2))
+Traceback (most recent call last):
+    ...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> matrix = [["hey"], ["you"]]
+>>> print(matrix_divided(matrix, 2))
+Traceback (most recent call last):
+    ...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
