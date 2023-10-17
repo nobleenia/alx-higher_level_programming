@@ -48,7 +48,7 @@ class Base:
     def save_to_file(cls, list_objs):
         """
         Write the JSON serialization of a list of objects to a file
-        
+
         Args:
             list_objs (list): A list of inherited Base instances
         """
