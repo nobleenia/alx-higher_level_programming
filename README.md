@@ -14,3 +14,4 @@
 11. 0x0B-python-input_output - 0x0B. Python - Input/Output
 12. 0x0C-python-almost_a_circle - 0x0C. Python - Almost a circle
 13. 0x0D-SQL_introduction - 0x0D. SQL - Introduction0x0D. SQL - Introduction
+14. 0x0E-SQL_more_queries - 0x0E. SQL - More queries
