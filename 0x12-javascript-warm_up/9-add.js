@@ -1,10 +1,10 @@
 #!/usr/bin/node
 
-const a = process.argv[2];
-const b = process.argv[3];
+const myVar1 = process.argv[2];
+const myVar2 = process.argv[3];
 
 function add(a, b) {
   console.log(a + b);
 }
 
-add(a, b);
+add(myVar1, myVar2);
