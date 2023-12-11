@@ -5,7 +5,7 @@ const myVar2 = parseInt(process.argv[3]);
 
 function add (a, b) {
     if (isNaN(a) || isNaN(b)) {
-	return NaN;
+      return NaN;
   }
   return a + b;
 }
