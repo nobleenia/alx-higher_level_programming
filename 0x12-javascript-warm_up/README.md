@@ -14,4 +14,7 @@
 11. 11-second_biggest.js: A script that searches the second biggest integer in the list of arguments
 12. 12-object.js: A script updated to replace the value 12 with 89
 13. 13-add.js: A function that returns the addition of 2 integers
-14.
+14. 100-let_me_const.js: A file that modifies the value of myVar to 333
+15. 101-call_me_moby.js: A function that executes x times a function
+16. 102-add_me_maybe.js: A function that increments and calls a function
+17. 103-object_fct.js: 
