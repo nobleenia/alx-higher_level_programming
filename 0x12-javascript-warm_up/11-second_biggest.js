@@ -1,5 +1,5 @@
 #!/usr/bin/node
-let args = process.argv.slice(2).map((x) => {
+const args = process.argv.slice(2).map((x) => {
   return parseInt(x);
 });
 if (args.length <= 1) {
