@@ -1,0 +1,34 @@
+#!/usr/bin/python3
+"""
+Lists all City objects from the database
+"""
+from sys import argv
+from sqlalchemy import create_engine
+from sqlalchemy.orm import Session
+from relationship_state import Base, State
+from relationship_city import City
+
+def list_cities():
+    """
+    Query the database and list all the cities in the database
+    """
+    # Create an engine and connect to the database
+    engine = create_engine("mysql+mysqldb://{}:{}@localhost/{}".format(argv[1], argv[2], argv[3]), pool_pre_ping=True)
+
+    # Create table if doesn't exist
+    Base.metadata.create_all(engine)
+
+    # Create session
+    session = Session(engine)
+
+    # Query the database
+    cities = session.query(City).order_by(City.id).all()
+    # Print the results
+    for city in cities:
+        print(f"{city.id}: {city.name} -> {city.state.name}")
+
+    # Close the session
+    session.close()
+
+if __name__ == "__main__":
+    list_cities()

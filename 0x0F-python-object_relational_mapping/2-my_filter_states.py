@@ -2,16 +2,16 @@
 """
 A script to connect to a MySQL server,
 retrieve and print a list of states
-from the specified database,
-sorted in ascending order by states.id.
+whose names match a provided pattern,
+sorted in ascending order by states.id
 """
 import MySQLdb
 from sys import argv
 
-def get_states():
+def get_states_arg():
     """
-    Connect to the MySQL server,
-    retrieve and print a list of states
+    Connect to the MySQL server, retrieve and print a list of states
+    whose names match the provided pattern, sorted by states.id
     """
     # Connect to MySQL server
     db = MySQLdb.connect(host="localhost",
@@ -23,18 +23,20 @@ def get_states():
     # Create a cursor
     cursor = db.cursor()
 
-    # Execute SQL query to select all states order by id
-    cursor.execute("SELECT * FROM states ORDER  BY id ASC")
+    # Execute the SQL query to select states with a name pattern and order by id
+    cursor.execute("SELECT * FROM states WHERE name LIKE '{:s}'\
+                    ORDER BY id ASC".format(argv[4]))
+
     # Fetch all rows
     rows = cursor.fetchall()
     # Print the results
     for i in rows:
         print(i)
 
-    # Close the cursor and database connection
+    # Close cursor and database
     cursor.close()
     db.close()
 
 if __name__ == "__main__":
     # Run the script when executed directly
-    get_states()
+    get_states_arg()

@@ -15,3 +15,12 @@
 12. 12-model_state_update_id_2.py: A script that changes the name of a State object from the database hbtn_0e_6_usa
 13. 13-model_state_delete_a.py: A script that deletes all State objects with a name containing the letter a from the database hbtn_0e_6_usa
 14. model_city.py, 14-model_city_fetch_by_state.py: A Python file similar to model_state.py named model_city.py that contains the class definition of a City
+15. relationship_city.py, relationship_state.py, 100-relationship_states_cities.py: A script that creates the State “California” with the City “San Francisco” from the database
+16. 101-relationship_states_cities_list.py: A script that lists all State objects, and corresponding City objects, contained in the database
+17. 102-relationship_cities_states_list.py: A script that lists all City objects from the database
+
+## Usage:
+
+    ./script.py <mysql_username> <mysql_password> <database_name>  
+
+Note: No argument validation is performed in the script.
