@@ -8,6 +8,7 @@ sorted in ascending order by states.id
 import MySQLdb
 from sys import argv
 
+
 def get_states_arg():
     """
     Connect to the MySQL server, retrieve and print a list of states
@@ -23,7 +24,7 @@ def get_states_arg():
     # Create a cursor
     cursor = db.cursor()
 
-    # Execute the SQL query to select states with a name pattern and order by id
+    # Execute the SQL query to select states with a name
     cursor.execute("SELECT * FROM states WHERE name LIKE '{:s}'\
                     ORDER BY id ASC".format(argv[4]))
 
@@ -36,6 +37,7 @@ def get_states_arg():
     # Close cursor and database
     cursor.close()
     db.close()
+
 
 if __name__ == "__main__":
     # Run the script when executed directly

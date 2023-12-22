@@ -8,6 +8,7 @@ sorted in ascending order by states.id.
 import MySQLdb
 from sys import argv
 
+
 def get_states():
     """
     Connect to the MySQL server,
@@ -34,6 +35,7 @@ def get_states():
     # Close the cursor and database connection
     cursor.close()
     db.close()
+
 
 if __name__ == "__main__":
     # Run the script when executed directly

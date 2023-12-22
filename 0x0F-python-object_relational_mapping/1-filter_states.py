@@ -8,6 +8,7 @@ sorted in ascending order by states.id
 import MySQLdb
 from sys import argv
 
+
 def get_n_states():
     """
     Connect to the MySQL server, retrieve and print a list of states
@@ -19,12 +20,13 @@ def get_n_states():
                          user=argv[1],
                          passwd=argv[2],
                          db=argv[3])
-    
+
     # Create a cursor
     cursor = db.cursor()
 
     # Execute the SQL query to select states starting with 'N'
-    cursor.execute("SELECT * FROM states WHERE name LIKE BINARY 'N%' ORDER BY id")
+    cursor.execute("SELECT * FROM states WHERE name LIKE BINARY\
+                     'N%' ORDER BY id")
 
     # Fetch all rows
     rows = cursor.fetchall()
@@ -36,6 +38,7 @@ def get_n_states():
     # Close the cursor and database
     cursor.close()
     db.close()
+
 
 if __name__ == "__main__":
     # Run the script when executed directly

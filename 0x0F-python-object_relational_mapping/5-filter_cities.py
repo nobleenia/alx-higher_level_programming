@@ -7,6 +7,7 @@ with their corresponding states, sorted by city ID
 import MySQLdb
 from sys import argv
 
+
 def get_cities_arg():
     """
     Connect to the MySQL server, 
@@ -43,6 +44,7 @@ def get_cities_arg():
     # Close cursor and database
     cursor.close()
     db.close()
+
 
 if __name__ == "__main__":
     # Run the script if executed directly

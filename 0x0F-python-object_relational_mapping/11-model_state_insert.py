@@ -7,12 +7,14 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import Session
 from model_state import Base, State
 
+
 def add_state_obj():
     """
     Add a State object to the database and print its ID
     """
     # Create engine and connect to database
-    engine = create_engine("mysql+mysqldb://{}:{}@localhost/{}".format(argv[1], argv[2], argv[3]), pool_pre_ping=True)
+    engine = create_engine("mysql+mysqldb://{}:{}@localhost/{}".format(argv[1],
+                                                                       argv[2], argv[3]), pool_pre_ping=True)
 
     # Create table if it doesn't exist
     Base.metadata.create_all(engine)
@@ -31,6 +33,7 @@ def add_state_obj():
 
     # Close the session
     session.close()
+
 
 if __name__ == "__main__":
     add_state_obj()

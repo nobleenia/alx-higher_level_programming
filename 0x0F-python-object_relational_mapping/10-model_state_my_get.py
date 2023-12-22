@@ -7,12 +7,14 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import Session
 from model_state import Base, State
 
+
 def list_state_name():
     """
     Print the State object with the specified name from the database
     """
     # Create an engine and connect to database
-    engine = create_engine("mysql+mysqldb://{}:{}@localhost/{}".format(argv[1], argv[2], argv[3]), pool_pre_ping=True)
+    engine = create_engine("mysql+mysqldb://{}:{}@localhost/{}".format(argv[1],
+                                                                       argv[2], argv[3]), pool_pre_ping=True)
 
     # Create tables if doesn't exist
     Base.metadata.create_all(engine)
@@ -31,6 +33,7 @@ def list_state_name():
 
     # Close the session
     session.close()
+
 
 if __name__ == "__main__":
     list_state_name()

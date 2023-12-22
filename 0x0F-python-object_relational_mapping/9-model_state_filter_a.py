@@ -7,12 +7,14 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import Session
 from model_state import Base, State
 
+
 def state_filter():
     """
     Filter and print states containing the letter 'a'
     """
     # Create an engine and connect to the database
-    engine = create_engine("mysql+mysqldb://{}:{}@localhost/{}".format(argv[1], argv[2], argv[3]), pool_pre_ping=True)
+    engine = create_engine("mysql+mysqldb://{}:{}@localhost/{}".format(argv[1],
+                                                                       argv[2], argv[3]), pool_pre_ping=True)
 
     # Create tables if they don't exist
     Base.metadata.create_all(engine)
