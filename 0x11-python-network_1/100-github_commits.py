@@ -37,5 +37,6 @@ def main(argv):
         for i in range(0, 10):
             list_commits(i, commit_list)
 
+
 if __name__ == "__main__":
     main(argv)

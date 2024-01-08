@@ -15,5 +15,6 @@ def main():
     print("\t- type: {}".format(type(quest.text)))
     print("\t- content: {}".format(quest.text))
 
+
 if __name__ == "__main__":
     main()

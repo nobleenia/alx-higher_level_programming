@@ -17,5 +17,6 @@ def main(argv):
     quest = requests.post(url, data=var)
     print(quest.text)
 
+
 if __name__ == "__main__":
     main(argv)

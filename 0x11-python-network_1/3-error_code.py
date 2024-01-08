@@ -23,5 +23,6 @@ def main(argv):
     except urllib.error.URLError as err:
         print("Error code: {}".format(err.code))
 
+
 if __name__ == "__main__":
     main(argv)
