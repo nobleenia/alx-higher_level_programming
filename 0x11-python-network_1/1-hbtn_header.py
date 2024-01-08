@@ -15,6 +15,8 @@ def main(argv):
     with urllib.request.urlopen(url) as response:
         headers = response.info()
         req_id = headers["X-Request-Id"]
+        print(req_id)
+
 
 if __name__ == "__main__":
     main(argv[1])
