@@ -26,7 +26,8 @@ def main(argv):
     owner_name = argv[2]
     headers = {"Accept": "application/vnd.github.v3+json"}
     feedback = requests.get("https://api.github.com/repos/" + owner_name
-                            + "/" + repository_name + "/commits", headers=headers)
+                            + "/" + repository_name +
+                            "/commits", headers=headers)
     commit_list = feedback.json()
     size = len(commit_list)
 
