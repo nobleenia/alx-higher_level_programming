@@ -15,10 +15,11 @@ def main(argv):
     """
     url = argv[1]
     quest = requests.get(url)
-    if quest.status_code == requests.code.ok:
+    if quest.status_code == requests.codes.ok:
         print(quest.text)
     else:
         print("Error code: {}".format(quest.status_code))
+
 
 if __name__ == "__main__":
     main(argv)

@@ -20,7 +20,7 @@ def main(argv):
     try:
         profile_data = feedback.json()
         print(profile_data["id"])
-    except:
+    except Exception:
         print("None")
 
 

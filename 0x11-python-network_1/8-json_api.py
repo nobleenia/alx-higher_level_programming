@@ -16,7 +16,7 @@ def main(argv):
     if len(argv) < 2:
         q = ""
     else:
-        q = argv[2]
+        q = argv[1]
 
     mess = {"q": q}
     quest = requests.post(url, data=mess)
@@ -27,8 +27,9 @@ def main(argv):
             print("No result")
         else:
             print("[{}] {}".format(feedback['id'], feedback['name']))
-    except:
+    except Exception:
         print("Not a valid JSON")
+
 
 if __name__ == "__main__":
     main(argv)
