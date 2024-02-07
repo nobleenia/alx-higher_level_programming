@@ -21,3 +21,4 @@
 18. 0x10. Python - Network #0 - [0x10-python-network_0](https://github.com/nobleenia/alx-higher_level_programming/tree/master/0x10-python-network_0)
 19. 0x11. Python - Network #1 - [0x11-python-network_1](https://github.com/nobleenia/alx-higher_level_programming/tree/master/0x11-python-network_1)
 20. 0x14. JavaScript - Web scraping - [0x14-javascript-web_scraping](https://github.com/nobleenia/alx-higher_level_programming/tree/master/0x14-javascript-web_scraping)
+20. 0x15. JavaScript - Web jQuery - [0x15-javascript-web_jquery](https://github.com/nobleenia/alx-higher_level_programming/tree/master/0x15-javascript-web_jquery)
